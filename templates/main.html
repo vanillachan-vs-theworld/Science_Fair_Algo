@@ -5,8 +5,12 @@
 
 
 <body>
-
-	
+	<p>
+	<button  style="width: 200px; margin-left: auto;margin-right:auto; margin-bottom: 50;" href="http://127.0.0.1:2000/home">Hand Soap</button>
+	<button style="width: 200px; margin-left: auto;margin-right:auto; margin-bottom: 50;" href="http://127.0.0.1:2000/home">Bath Soak</button>
+	<button style="width: 200px; margin-left: auto;margin-right:auto; margin-bottom: 50;" href="http://127.0.0.1:2000/home">Shampoo</button>
+	<button style="width: 200px; margin-left: auto;margin-right:auto; margin-bottom: 50;" href="http://127.0.0.1:2000/home">Dish Soap</button>
+	</p>
     <!-- Form for pics -->
     <header class="container">
       <hgroup>
@@ -14,7 +18,7 @@
 
 {% if filename %}
 	<div>
-		<img src="{{ url_for('static', filename='/Images/'+filename) }}">
+		<img src="{{ url_for('static', filename='/Image_Upload/'+filename) }}">
 	</div>
 {% endif %}
 <form method="post" action="/home" enctype="multipart/form-data">
@@ -25,3 +29,7 @@
 		<input type="submit" value="Submit">
 	</p>
 </form>
+
+<h3><!--results here--></h3>
+</body>
+</html>
