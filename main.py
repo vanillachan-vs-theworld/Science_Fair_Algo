@@ -1,9 +1,12 @@
 from flask import Flask,request,render_template,redirect
 import os
+
+import another_copy_of_science_shampoo_randomforrest
 app = Flask(__name__)
 import cv2
 import numpy as np
 import glob
+
 ts = 0
 found = None
 app.config["IMAGE_UPLOADS"] = "static\Image_Upload"
@@ -71,6 +74,8 @@ for file_name in glob.glob('static\\Image_Upload\\*'):
     print(B_mean1)
     print(G_mean1)
     print(R_mean1)
+    import os 
+    os.system('another_copy_of_science_shampoo_randomforrest.py') 
 #images = ("/Image_Upload" + filename)
 #print(images)
 app.run(debug=True,port=2000)
