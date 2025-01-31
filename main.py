@@ -6,7 +6,7 @@ import numpy as np
 import glob
 ts = 0
 found = None
-app.config["IMAGE_UPLOADS"] = "Image_Upload"
+app.config["IMAGE_UPLOADS"] = "static\Image_Upload"
 #app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["PNG","JPG","JPEG"]
 
 from werkzeug.utils import secure_filename
@@ -36,7 +36,7 @@ def upload_image():
 
 @app.route('/display/<filename>')
 def display_image(filename):
-    return redirect(url_for('static',filename = "/Image_Upload" + filename), code=301)
+    return redirect(url_for('static',filename = "static\Image_Upload" + filename), code=301)
 
 for file_name in glob.glob('static\\Image_Upload\\*'):
     ts = 0
